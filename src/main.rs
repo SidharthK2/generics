@@ -1,17 +1,10 @@
-fn main() {
-    let mut number_list = vec![34, 50, 25, 100, 65];
-
-    let largest = largest_num(&mut number_list);
-
-    println!("The largest number is {:?}", number_list);
+struct Point<T, U> {
+    x: T,
+    y: U,
 }
 
-fn largest_num<T>(list: &[T]) -> &T {
-    let mut largest = &list[0];
-    for num in list {
-        if num > largest {
-            largest = num;
-        }
-    }
-    largest
+fn main() {
+    let both_integer = Point { x: 5, y: 10 };
+    let both_float = Point { x: 1.0, y: 2 };
+    let integer_and_float = Point { x: 5, y: 4.0 };
 }
